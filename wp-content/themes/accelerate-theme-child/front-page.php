@@ -14,7 +14,8 @@
 
 get_header(); ?>
 
-<section class="home-page">
+<!-- starts HERO section -->
+<section class="home-page"> 
 	<div class="site-content">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<div class='homepage-hero'>
@@ -22,11 +23,42 @@ get_header(); ?>
 				<a class="button" href="<?php echo home_url(); ?>/blog">View Our Work</a>
 			</div>
 		<?php endwhile; // end of the loop. ?>
-	</div><!-- .container -->
-</section><!-- .home-page -->
+	</div><!-- ends .site-content -->
+</section><!-- ends .home-page (hero section) -->
 
 
 
+<!-- starts FEATURED WORK section -->
+<section class="featured-work"> 
+	<div class="site-content">
+
+		<h4>Featured Work</h4>
+
+		<ul class="homepage-featured-work">
+
+			<?php query_posts('posts_per_page=3&post_type=case_studies'); ?>
+				
+				<?php while ( have_posts() ) : the_post(); 
+					$image_1 = get_field("image_1");
+					$size="medium"; ?> <!-- loop -->
+
+					<li class="individual-featured-work">
+					<figure><?php echo wp_get_attachment_image($image_1, $size); ?></figure>
+					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+					</li>
+
+				<?php endwhile; ?> 	<!-- end loop -->
+				<?php wp_reset_query(); ?>
+
+		</ul>
+
+	</div><!-- ends .site-content -->
+</section><!-- ends .featured-work -->
+
+
+
+
+<!-- starts RECENT WORK section -->
 <section class="recent-posts">
 	<div class="site-content">
 
