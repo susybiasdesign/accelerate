@@ -29,7 +29,7 @@ get_header(); ?>
 
                 <?php the_content(); ?>
 
-                <h4><a href="<?php the_permalink(); ?>">View Project</a></h4>
+                <h4><a href="<?php echo home_url(); ?>/case-studies">Back to Case Studies</a></h4>
             </aside>
 
 

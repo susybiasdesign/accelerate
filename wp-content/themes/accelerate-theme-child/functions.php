@@ -46,3 +46,36 @@ function create_custom_post_types() {
 // Hook this custom post type function into the theme
 add_action( 'init', 'create_custom_post_types' );
 
+//Twitter plugin
+
+function accelerate_theme_child_widget_init() {
+       register_sidebar( array(
+        'name' =>__( 'Homepage sidebar', 'accelerate-theme-child'),
+        'id' => 'sidebar-2',
+        'description' => __( 'Appears on the static front page template', 'accelerate-theme-child' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+    
+}
+add_action( 'widgets_init', 'accelerate_theme_child_widget_init' );
+
+
+/* Register widget area for footer */
+
+
+    register_sidebar( array( //footer sidebar widget
+        'name' => 'Footer Sidebar 1',
+        'id' => 'footer-sidebar-1',
+        'description' => 'Appears in the footer area',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+
+
+add_action( 'widgets_init', 'accelerate_widgets_init' );
+

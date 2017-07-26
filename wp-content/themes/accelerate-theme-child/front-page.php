@@ -58,7 +58,7 @@ get_header(); ?>
 
 
 
-<!-- starts RECENT WORK section -->
+<!-- starts RECENT BLOG POST section -->
 <section class="recent-posts">
 	<div class="site-content">
 
@@ -70,17 +70,37 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?> <!-- loop -->
 					
 					<h2><?php the_title(); ?></h2>
-						<?php the_excerpt(); ?>
+					<?php the_excerpt(); ?>
+					<h5><a href="<?php the_permalink(); ?>">View Project</a></h5>
 
 				<?php endwhile; ?> 	<!-- end loop -->
 				<?php wp_reset_query(); ?>
 
-<h4>Read More</h4>
+		</div>
+
+		<div class="PI_SimpleTwitterTweets">
+
+			<h4>Recent Tweets</h4>
+			<h2>@accelerate</h2>
+
+		<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+		<div id="secondary" class="widget-area" role="complementary">
+			<?php dynamic_sidebar( 'sidebar-2' ); ?>
+		</div>
+		<?php endif; ?>
+
+		<h5><a href="http://twitter.com">Follow Us</a></h5>
 
 		</div>
- 
+	
+
 	</div>
+
 </section>
+
+<!-- TWITTER WIDGET -->
+
+
 
 
 

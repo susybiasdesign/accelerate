@@ -30,6 +30,16 @@
     background: none repeat scroll 0 0 #45ac9d;
 	}
 
+.menu-top-nav-container a {
+	text-transform: uppercase;
+	font-size: .8em;
+	}
+
+.menu-top-nav-container li {
+	display: inline-block;
+	padding-left: 20px;
+	}
+
 	/* HOMEPAGE FEATURED WORK SECTION */
 
 .featured-work {
@@ -72,6 +82,10 @@
 
 .blog-post {
 	width: 50%;
+	display: inline-block;
+	float: left;
+	margin-bottom: 50px;
+	margin-right: 20px;
 	}
 
 .blog-post h4 {
@@ -87,12 +101,70 @@
 	font-weight: bold;
 	}
 
-.blog-post .read-more-link {
-	font-size: 1em;
+.blog-post h5 a{
+	font-size: .9em;
 	font-family: 'Montserrat';
 	font-weight: bold;
 	color: #45ac9d;
 	text-transform: uppercase;
+	}
+
+/* TWITTER WIDGET */
+
+.PI_SimpleTwitterTweets {
+	width: 40%;
+	float: left;
+	}
+
+.PI_SimpleTwitterTweets h4 {
+	font-size: 1em;
+	font-family: 'Montserrat';
+	color: #a6a6a6;
+	text-transform: uppercase;
+		margin-left: 50px;
+	}
+
+.PI_SimpleTwitterTweets h2 {
+	margin-left: 50px;
+	}
+
+.PI_SimpleTwitterTweets h5 a {
+	font-size: .9em;
+	font-family: 'Montserrat';
+	font-weight: bold;
+	color: #45ac9d;
+	text-transform: uppercase;
+	margin: 0px 0px 20px 50px;
+	}
+
+.tweets {
+	list-style: none;
+	font-weight: normal;
+	width: 300px;
+	margin-left: 35px
+	}
+
+
+/*  SIDEBAR */
+
+#searchsubmit {
+	background-color: #45ac9d;
+	color: #fff;
+	border: none;
+	margin-top:10px;
+}
+
+#submitnewsletter {
+	background-color: #45ac9d;
+	color: #fff;
+	border: none;
+	margin-top: -10px;
+}
+
+#footer-sidebar {
+	width: 30%;
+	float: right;
+	clear: left;
 	}
 
 
@@ -158,6 +230,7 @@ div.case-study-images {
 article.case-study {
 	clear: both;
 	}
+
 
 
 /* CONTACT FORM */
@@ -264,3 +337,14 @@ article.case-study {
 .page-not-found h1 {
 	color: #45ac9d;
 	}
+
+
+
+
+
+
+
+
+
+
+
